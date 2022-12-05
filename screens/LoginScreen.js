@@ -49,7 +49,7 @@ export default class LoginScreen extends Component {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
-        this.props.navigation.replace("Dashboard");
+        this.props.navigation.replace("Panel");
       })
       .catch(error => {
         Alert.alert(error.message);
@@ -66,20 +66,20 @@ export default class LoginScreen extends Component {
         <View style={styles.container}>
           <SafeAreaView style={styles.droidSafeArea} />
 
-          <Text style={styles.appTitleText}>Story Telling</Text>
+          <Text style={styles.appTitleText}>Contar historias</Text>
           <Image source={appIcon} style={styles.appIcon} />
 
           <TextInput
             style={styles.textinput}
             onChangeText={text => this.setState({ email: text })}
-            placeholder={"Enter Email"}
+            placeholder={"Ingresar correo electrónico"}
             placeholderTextColor={"#FFFFFF"}
             autoFocus
           />
           <TextInput
             style={[styles.textinput, { marginTop: 20 }]}
             onChangeText={text => this.setState({ password: text })}
-            placeholder={"Enter Password"}
+            placeholder={"Ingresar contraseña"}
             placeholderTextColor={"#FFFFFF"}
             secureTextEntry
           />
@@ -87,12 +87,12 @@ export default class LoginScreen extends Component {
             style={[styles.button, { marginTop: 20 }]}
             onPress={() => this.signIn(email, password)}
           >
-            <Text style={styles.buttonText}>Login</Text>
+            <Text style={styles.buttonText}>Inicio de sesión</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate("RegisterScreen")}
+            onPress={() => this.props.navigation.navigate("PaginaRegistro")}
           >
-            <Text style={styles.buttonTextNewUser}>New User ?</Text>
+            <Text style={styles.buttonTextNewUser}>¿Usuario nuevo?</Text>
           </TouchableOpacity>
         </View>
       );
