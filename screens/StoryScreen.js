@@ -64,7 +64,7 @@ export default class StoryScreen extends Component {
     if (current_color === "gray") {
       Speech.speak(`${title} by ${author}`);
       Speech.speak(story);
-      Speech.speak("The moral of the story is!");
+      Speech.speak("¡La moraleja de la hsitoria es!");
       Speech.speak(moral);
     } else {
       Speech.stop();
@@ -73,7 +73,7 @@ export default class StoryScreen extends Component {
 
   render() {
     if (!this.props.route.params) {
-      this.props.navigation.navigate("Home");
+      this.props.navigation.navigate("Inicio");
     } else if (this.state.fontsLoaded) {
       SplashScreen.hideAsync();
       return (
@@ -98,7 +98,7 @@ export default class StoryScreen extends Component {
                     : styles.appTitleText
                 }
               >
-                Storytelling App
+                App para contar historias
               </Text>
             </View>
           </View>
