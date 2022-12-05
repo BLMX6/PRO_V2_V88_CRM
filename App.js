@@ -21,13 +21,13 @@ const Stack = createStackNavigator();
 
 const StackNav = () => {
   return(
-  <Stack.Navigator initialRouteName="Login"  screenOptions={{
+  <Stack.Navigator initialRouteName="InicioSesion"  screenOptions={{
     headerShown: false,
     gestureEnabled: false
   }}>
-    <Stack.Screen name="Login" component={LoginScreen} />
-    <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-    <Stack.Screen name="Dashboard" component={DrawerNavigator} />
+    <Stack.Screen name="InicioSesion" component={LoginScreen} />
+    <Stack.Screen name="PaginaRegistro" component={RegisterScreen} />
+    <Stack.Screen name="Panel" component={DrawerNavigator} />
   </Stack.Navigator>)
 }
 
