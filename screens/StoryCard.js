@@ -69,7 +69,7 @@ export default class StoryCard extends Component {
         <TouchableOpacity
           style={styles.container}
           onPress={() =>
-            this.props.navigation.navigate("StoryScreen", {
+            this.props.navigation.navigate("PantallaDeHistoria", {
               story: this.props.story
             })
           }
@@ -132,7 +132,7 @@ export default class StoryCard extends Component {
                       : styles.likeText
                   }
                 >
-                  12k
+                  12m
                 </Text>
               </View>
             </View>
