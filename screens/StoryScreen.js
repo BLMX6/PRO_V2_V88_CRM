@@ -181,7 +181,7 @@ export default class StoryScreen extends Component {
                       : styles.moralText
                   }
                 >
-                  Moral - {this.props.route.params.story.moral}
+                  Moraleja - {this.props.route.params.story.moral}
                 </Text>
               </View>
               <View style={styles.actionContainer}>
